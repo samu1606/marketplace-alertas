@@ -1,0 +1,9 @@
+services:
+  marketplace-alertas:
+    image: nginx:alpine
+    container_name: marketplace-alertas
+    restart: always
+    volumes:
+      - ./landing/index.html:/usr/share/nginx/html/index.html:ro
+    expose:
+      - "80"
